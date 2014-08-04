@@ -1,3 +1,6 @@
+Keyboard.Key = {};
+Keyboard.Row = function $Keyboard$Row$() {
+};
 var Keyboard = function $Keyboard$() {
 };
 Keyboard.prototype.createRow = function $Keyboard$$createRow$($div_first_argument$$) {

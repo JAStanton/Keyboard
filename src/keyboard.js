@@ -1,11 +1,13 @@
 goog.provide('Keyboard');
+goog.require('Keyboard.Row');
+goog.require('goog.dom')
 
 /**
  * Main Keyboard Class.
  *
  * @constructor
  */
-var Keyboard = function() {
+Keyboard = function() {
 
 };
 

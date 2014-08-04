@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     'closure-compiler': {
       prod: {
         closurePath: '$CLOSURE_PATH',
-        js: 'src/keyboard.js',
+        js: 'src/*.js',
         jsOutputFile: 'build/js/keyboard.min.js',
         maxBuffer: 500,
         options: {
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       },
       dev: {
         closurePath: '$CLOSURE_PATH',
-        js: 'src/keyboard.js',
+        js: 'src/*.js',
         jsOutputFile: 'build/js/keyboard.js',
         maxBuffer: 500,
         options: {
@@ -23,6 +23,7 @@ module.exports = function(grunt) {
       },
     }
   });
+  // https://github.com/gmarty/grunt-closure-compiler
   grunt.loadNpmTasks('grunt-closure-compiler');
   grunt.registerTask('default', 'closure-compiler');
 };
