@@ -1,5 +1,15 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    gjslint: {
+      options: {
+        reporter: {
+          name: 'console'
+        }
+      },
+      all: {
+        src: 'src/*.js'
+      }
+    },
     'closure-compiler': {
       prod: {
         closurePath: '$CLOSURE_PATH',
@@ -25,5 +35,6 @@ module.exports = function(grunt) {
   });
   // https://github.com/gmarty/grunt-closure-compiler
   grunt.loadNpmTasks('grunt-closure-compiler');
-  grunt.registerTask('default', 'closure-compiler');
+  grunt.loadNpmTasks('grunt-gjslint');
+  grunt.registerTask('default', ['gjslint', 'closure-compiler']);
 };
